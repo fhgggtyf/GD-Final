@@ -1,5 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-buffed = "";
-buff_calc = calc_add;
-buff_num = 0;
+if(powerup == noone){
+	powerup = instance_create_layer(x,y,"Instances",buff);
+}

@@ -1,0 +1,1 @@
+buff = obj_health_pack

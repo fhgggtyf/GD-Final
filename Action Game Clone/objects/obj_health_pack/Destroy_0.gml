@@ -1,7 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(!other.stpd){
-	with(other){
-		stepped();
-	}
-}
+audio_play_sound(snd_healed, 1, false);

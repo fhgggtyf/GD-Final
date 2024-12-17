@@ -1,7 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(!other.stpd){
-	with(other){
-		stepped();
-	}
-}
+_health = min(_health + 50, 500)
+instance_destroy(other)

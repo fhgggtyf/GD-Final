@@ -1,5 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (movement_buff != 0) {
+    // Add current position to the trail
+    array_push(trail_positions, [[x, y], image_xscale, image_index]);
+
+    // Remove oldest position if the trail exceeds its length
+    if (array_length(trail_positions) > trail_length) {
+        array_delete(trail_positions, 0, 1);
+    }
+} else {
+    // Clear the trail when inactive
+    array_delete(trail_positions, 0, 1);
+}
+
 if(global.israining){
 	var check_y = y - 1; // Start just above the object
 	var found_object = noone;
@@ -30,12 +43,12 @@ else{
 } 
 
 if(keyboard_check(control_set[0]) && !dead){
-	modded_xacc=xacc-h_modifier;
-	hspeed = global.winddir == "left" ? max(hspeed - modded_xacc, -25 * acc_modifier) : max(hspeed - modded_xacc, -25 / acc_modifier);
+	var modded_xacc=xacc-h_modifier;
+	hspeed = (global.winddir == "left" ? max(hspeed - modded_xacc, -25 * acc_modifier) : max(hspeed - modded_xacc, -25 / acc_modifier)) + movement_buff;
 }
 else if(keyboard_check(control_set[1]) && !dead){
-	modded_xacc=xacc+h_modifier;
-	hspeed = global.winddir == "right" ? min(hspeed + modded_xacc, 25 * acc_modifier) : min(hspeed + modded_xacc, 25 / acc_modifier);
+	var modded_xacc=xacc+h_modifier;
+	hspeed = global.winddir == "right" ? min(hspeed + modded_xacc, 25 * acc_modifier) : min(hspeed + modded_xacc, 25 / acc_modifier) - movement_buff;
 }
 else{
 	var hspeed_temp = hspeed;

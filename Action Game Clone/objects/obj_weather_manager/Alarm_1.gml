@@ -4,7 +4,7 @@ depth = -10;
 
 lightning = !lightning;
 
-random_time = irandom(1)*irandom(20);
+var random_time = irandom(1)*irandom(20);
 if(random_time != 0 || lightning){
 
 	alarm[1] = random_time + 1;

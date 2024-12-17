@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_boom",
+  "%Name":"snd_rage",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.44,
-  "name":"snd_boom",
+  "duration":1.176,
+  "name":"snd_rage",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_boom.mp3",
+  "soundFile":"snd_rage.mp3",
   "type":0,
-  "volume":0.52,
+  "volume":1.0,
 }

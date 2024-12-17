@@ -15,6 +15,15 @@ init = false;
 
 respawn_wait = false;
 
+movement_buff = 0;
+
+trail_length = 10; // Number of positions in the trail
+trail_positions = []; // An array to store trail positions
+
+damage = 50;
+
+dmg_mod = 0;
+
 xacc = 3;
 xdcc = 1;
 

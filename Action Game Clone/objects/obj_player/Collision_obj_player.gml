@@ -5,7 +5,7 @@ if(check_collider_win(other) && vspeed > 0 && !dead && !other.dead){
 	vspeed = -50*v_modifier;
 	with(other){
 		die();
-		_health -= 50;
+		_health -= (other.damage + other.dmg_mod);
 	}
 	
 }

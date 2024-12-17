@@ -1,0 +1,1 @@
+buff = obj_movement_boost;

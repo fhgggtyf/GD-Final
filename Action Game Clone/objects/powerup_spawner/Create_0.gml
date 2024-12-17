@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(!other.stpd){
-	with(other){
-		stepped();
-	}
-}
+alarm[0] = 1;
+powerup = noone;
+
+buff = -1;

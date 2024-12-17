@@ -7,7 +7,9 @@ if ((x < 0 || x > room_width || y < 0 || y > room_height)&&creation_time>=200) {
 if(broken && !was_broken){
 	audio_play_sound(snd_boom,1,false);
 	var ins = instance_find(obj_game_manager,0)
-	ins.screen_shake()
+	with(ins){
+		screen_shake();
+	}
 	image_index = 1;
 	vspeed = 10;
 	if(image_xscale == -1){
